@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Globales*/
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  color: 000;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 span {
+  color: #037bc0;
+}
+.contenedor-navegacion {
+  border-top: 1px solid #e1e1e1;
+}
+
+.contenedor-centrado {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nombre-sitio {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.nav-principal {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero {
+  background-image: url(../img/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+/*Categorias*/
+.listado-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+}
