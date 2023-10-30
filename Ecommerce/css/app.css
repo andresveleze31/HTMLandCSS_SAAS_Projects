@@ -32,6 +32,12 @@ h1 {
   color: 000;
   font-size: 5rem;
 }
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.6rem;
+}
 
 img {
   max-width: 100%;
@@ -51,6 +57,7 @@ img {
   font-weight: 900;
   text-transform: uppercase;
   transition: background-color 0.3s ease-out;
+  text-align: center;
 }
 
 .btn:hover {
@@ -227,4 +234,68 @@ footer {
 .navegacion-footer {
   display: flex;
   flex-direction: column;
+}
+
+/**Nosotros**/
+
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+}
+
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/**Blog**/
+
+.contenedor-blog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4rem;
+}
+
+.entrada {
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.entrada-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.entrada-meta p {
+  color: #000;
+  font-weight: 900;
+}
+
+.entrada-meta span {
+  color: #037bc0;
+}
+
+.contenido-entrada-blog {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+/**Galeria**/
+.galeria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
 }
