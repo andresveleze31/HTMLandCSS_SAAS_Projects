@@ -118,3 +118,30 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+
+.grid-9 {
+  display: grid;
+  height: 120rem;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "contenido contenido sidebar";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*Alineacion GRID*/
+.grid-11 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 300px;
+  align-items: center;
+  place-content: center;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fit, 200px);
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
