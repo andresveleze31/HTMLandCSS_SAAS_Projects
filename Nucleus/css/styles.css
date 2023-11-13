@@ -230,6 +230,34 @@ img {
   background-color: var(--primario);
   margin-top: 5rem;
   padding: 10rem;
+  padding-top: 20rem;
+  padding-bottom: 30rem;
+  position: relative;
+  margin: 10rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .seguridad::before,
+  .seguridad::after {
+    background-color: var(--blanco);
+    content: "";
+    height: 20rem;
+    width: 100%;
+    position: absolute;
+  }
+
+  .seguridad::before {
+    top: -10rem;
+    left: 0;
+    transform: rotate(3deg);
+  }
+
+  .seguridad::after {
+    bottom: -10rem;
+    left: 0;
+    transform: rotate(3deg);
+  }
 }
 
 @media (max-width: 768px) {
@@ -279,4 +307,149 @@ img {
 
 .seguridad__elemento:hover {
   transform: scale(1.1);
+}
+
+/**Seccion Comisiones**/
+
+.comisiones__heading {
+  text-align: center;
+}
+
+.comisiones__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+@media (max-width: 768px) {
+  .comisiones__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comisiones__informacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.comisiones__informacion-negrita {
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .comisiones__informacion-negrita {
+    text-align: center;
+  }
+}
+
+.comisiones__elemento {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  place-items: center;
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.comisiones__elemento:hover {
+  transform: scale(1.1);
+}
+
+.comisiones__porcentaje {
+  color: var(--primario);
+}
+
+/*Testimoniales*/
+
+.testimoniales {
+  background-color: var(--primario);
+  padding: 3rem 0;
+}
+
+.testimoniales__heading {
+  color: var(--blanco);
+  text-align: center;
+  margin-top: 0;
+}
+
+.testimoniales__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .testimoniales__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.testimoniales__elemento {
+  background-color: var(--blanco);
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimoniales__quote {
+  display: flex;
+  gap: 2rem;
+}
+
+.testimoniales__autor {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--primario);
+  font-weight: 900;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #5a30a0;
+  padding: 3rem 0;
+}
+
+.footer__contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .footer__contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__navegacion {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer__navegacion {
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.footer__navegacion-enlace {
+  color: var(--blanco);
+  padding: 1rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer__navegacion-enlace {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__navegacion-enlace:hover {
+  color: var(--primario);
+  background-color: rgb(255 255 255 / 0.8);
+}
+.footer__logo {
+  width: 30rem;
 }
