@@ -1,0 +1,48 @@
+@use "../base/variables" as v;
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: v.$negro;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.6;
+  }
+
+  .header__contenido {
+    position: relative;
+  }
+
+  .header__barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+      width: 20rem;
+    }
+
+    .header__navegacion {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .header__link {
+      color: v.$blanco;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+}
+
+.header__inicio {
+  background-image: url("../img/header_inicio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
