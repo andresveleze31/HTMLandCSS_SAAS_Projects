@@ -1,0 +1,26 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.contenido__principal__iconos {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  text-align: center;
+
+  @include m.telefono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading__icono {
+    margin-top: 2rem;
+    color: v.$primario;
+    font-family: v.$fuenteCursiva;
+  }
+
+  .icono {
+    max-width: 15rem;
+  }
+}

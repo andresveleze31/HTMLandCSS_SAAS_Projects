@@ -1,4 +1,5 @@
 @use "../base/variables" as v;
+@use "../base/mixins" as m;
 
 .header {
   padding: 5rem 0;
@@ -17,12 +18,24 @@
 
   .header__contenido {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    @include m.telefono {
+      gap: 3rem;
+    }
   }
 
   .header__barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include m.telefono {
+      display: flex;
+      flex-direction: column;
+    }
 
     .header__logo {
       width: 20rem;
@@ -31,12 +44,36 @@
     .header__navegacion {
       display: flex;
       gap: 2rem;
+      @include m.telefono {
+        flex-direction: column;
+        text-align: center;
+      }
     }
 
     .header__link {
       color: v.$blanco;
       text-transform: uppercase;
       font-weight: 900;
+
+      &:hover {
+        color: v.$secundario;
+      }
+    }
+  }
+
+  .activo {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: v.$secundario;
+  }
+
+  .header__heading {
+    color: v.$blanco;
+    text-transform: uppercase;
+    text-align: center;
+    @include m.telefono {
+      font-size: 3rem;
+      line-height: 1.5;
     }
   }
 }
@@ -45,4 +82,5 @@
   background-image: url("../img/header_inicio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 70rem;
 }
