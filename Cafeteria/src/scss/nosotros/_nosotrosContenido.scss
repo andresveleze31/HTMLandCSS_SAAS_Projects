@@ -1,0 +1,22 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nosotros__contenido {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+
+  @include m.telefono {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nosotros__imagen {
+  width: 80%;
+  transform: rotate(-10deg);
+  padding: 2rem;
+
+  box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35);
+}

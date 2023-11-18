@@ -5,32 +5,32 @@
   padding: 4rem;
   margin-top: -10rem;
   position: relative;
+}
 
-  .contenido__principal__heading,
-  .contenido__principal__texto {
-    text-align: center;
+.contenido__principal__heading,
+.contenido__principal__texto {
+  text-align: center;
+}
+
+.contenido__principal__heading {
+  text-transform: uppercase;
+  color: v.$primario;
+  font-size: 3.6rem;
+  line-height: 1.8;
+
+  span {
+    color: v.$secundario;
+    font-size: 2rem;
+    display: block;
   }
 
-  .contenido__principal__heading {
-    text-transform: uppercase;
-    color: v.$primario;
-    font-size: 3.6rem;
-    line-height: 1.8;
-
-    span {
-      color: v.$secundario;
-      font-size: 2rem;
-      display: block;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 10rem;
-      height: 10rem;
-      margin: 0 auto;
-      background-image: url(../img/cafe.svg);
-      background-size: 10rem;
-    }
+  &::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    background-image: url(../img/cafe.svg);
+    background-size: 10rem;
   }
 }

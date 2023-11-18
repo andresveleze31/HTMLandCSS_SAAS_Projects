@@ -1,0 +1,29 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.testimonios {
+  background-color: v.$blanco;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: v.$fuenteCursiva;
+  margin-top: -10rem;
+
+  .testimonio {
+    width: 40%;
+    background-color: v.$cafeClaro;
+    padding: 3rem 4rem;
+
+    @include m.telefono {
+      width: 100%;
+    }
+  }
+
+  .testimonio__autor {
+    display: flex;
+    justify-content: flex-end;
+    color: v.$primario;
+    font-size: 2rem;
+  }
+}

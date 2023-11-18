@@ -1,0 +1,55 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.proceso {
+  background-color: v.$blanco;
+  margin-top: -10rem;
+  position: relative;
+  padding: 10rem;
+
+  @include m.telefono {
+    padding: 10rem 4rem;
+  }
+
+  .proceso__contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+.proceso__elemento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  @include m.telefono {
+    grid-template-columns: 1fr;
+  }
+
+  &:nth-child(even) {
+    .proceso__heading {
+      order: 1;
+    }
+    .proceso__imagen {
+      order: 2;
+    }
+  }
+
+  .proceso__heading {
+    text-transform: uppercase;
+    color: v.$primario;
+    &::after {
+      content: "";
+      width: 50%;
+      height: 5px;
+      display: block;
+      background-color: v.$secundario;
+    }
+  }
+
+  .proceso__texto {
+    line-height: 2.5;
+  }
+}

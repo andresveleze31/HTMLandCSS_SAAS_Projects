@@ -1,0 +1,44 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+
+  @include m.telefono {
+    flex-direction: column;
+  }
+
+  h3 {
+    text-align: center;
+    color: v.$blanco;
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+      color: v.$blanco;
+
+      span {
+        color: v.$secundario;
+        display: block;
+      }
+    }
+
+    .precio {
+      font-size: 4rem;
+      font-weight: 900;
+      text-align: center;
+    }
+  }
+}

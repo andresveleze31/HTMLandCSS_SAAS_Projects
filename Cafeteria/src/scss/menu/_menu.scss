@@ -1,1 +1,17 @@
-@use "../base/variables";
+@use "../base/variables" as v;
+
+.menu__seccion {
+  background-color: v.$primario;
+  padding: 15rem 5rem 20rem 5rem;
+
+  .menu__heading {
+    font-family: v.$fuente_principal;
+    text-transform: uppercase;
+    text-align: center;
+    color: v.$blanco;
+    span {
+      font-size: 2rem;
+      display: block;
+    }
+  }
+}
