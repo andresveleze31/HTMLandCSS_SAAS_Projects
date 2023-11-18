@@ -1,0 +1,17 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+
+  @include m.telefono {
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 30rem;
+  }
+}

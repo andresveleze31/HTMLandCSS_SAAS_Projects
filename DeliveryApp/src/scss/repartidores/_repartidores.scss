@@ -1,0 +1,43 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.repartidores {
+  padding-top: 5rem;
+
+  &__heading {
+    text-align: center;
+    color: v.$secundario;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+
+    @include m.telefono {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__texto {
+    color: v.$secundario;
+    line-height: 1.6;
+    @include m.telefono {
+      text-align: center;
+    }
+  }
+
+  &__boton {
+    background-color: v.$primario;
+    color: v.$blanco;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    @include m.telefono {
+      display: block;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.descarga {
+  margin-top: 10rem;
+  padding-top: 10rem;
+  background-color: v.$grisClaro;
+
+  &__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    align-items: center;
+    text-align: center;
+
+    @include m.telefono {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__heading {
+    color: v.$secundario;
+  }
+
+  &__elementos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &__elemento {
+    transform: scale(1.2) rotate(-2dg);
+  }
+}

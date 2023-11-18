@@ -1,0 +1,37 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.pasos {
+  margin-top: 10rem;
+
+  &__contenido {
+    background-color: v.$primario;
+  }
+
+  &__elemento {
+    transition-property: transform;
+    transition-duration: 300ms;
+    &:hover {
+      transform: rotate(-4deg) scale(1.2);
+    }
+  }
+
+  &__heading {
+    color: v.$blanco;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include m.telefono {
+      grid-template-columns: 1fr;
+    }
+  }
+}
