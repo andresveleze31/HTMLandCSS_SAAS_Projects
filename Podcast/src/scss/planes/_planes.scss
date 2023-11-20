@@ -1,0 +1,85 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.planes {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-color: v.$secundario;
+
+  &__heading {
+    color: v.$blanco;
+    text-align: left;
+
+    &::after {
+      content: "";
+      width: 10%;
+      height: 1rem;
+      display: block;
+      background-color: v.$primario;
+      margin-top: -1rem;
+    }
+  }
+
+  &__texto {
+    color: v.$blanco;
+  }
+
+  &__grid {
+    width: 70%;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include m.telefono {
+      grid-template-columns: 1fr;
+      gap: 10rem;
+    }
+  }
+
+  &__plan {
+    background-color: v.$blanco;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__imagen {
+    width: 10rem;
+  }
+
+  &__boton {
+    color: v.$negro;
+    background-color: v.$primario;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__precio {
+    font-weight: 900;
+  }
+
+  &__plan--green {
+    background-color: v.$primario;
+    margin: -5rem 0;
+    border-radius: 3rem;
+  }
+
+  &__boton--blanco {
+    border: 2px solid v.$blanco;
+  }
+
+  &__contenedor__grid {
+    display: flex;
+    justify-content: center;
+  }
+}

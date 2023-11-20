@@ -1,0 +1,19 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.estadisticas {
+  padding-top: 10rem;
+
+  &__heading {
+    text-align: left;
+
+    &::after {
+      content: "";
+      width: 40%;
+      height: 1rem;
+      display: block;
+      background-color: v.$primario;
+      margin-top: -1rem;
+    }
+  }
+}

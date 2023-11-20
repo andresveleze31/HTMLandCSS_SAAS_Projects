@@ -1,0 +1,31 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.seccion__contenido {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+
+  @include m.telefono {
+    grid-template-columns: 1fr;
+  }
+
+  padding-top: 10rem;
+
+  .seccion__heading {
+    color: v.$negro;
+    text-align: left;
+
+    &::after {
+      content: "";
+      width: 40%;
+      height: 1rem;
+      display: block;
+      background-color: v.$primario;
+      margin-top: -1rem;
+    }
+
+    
+  }
+}

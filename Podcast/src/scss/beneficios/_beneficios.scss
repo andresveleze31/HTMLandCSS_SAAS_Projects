@@ -1,0 +1,40 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.beneficios {
+  margin-top: 5rem;
+  padding: 5rem 0;
+  background-color: v.$primario;
+
+  &__contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 5rem;
+
+    @include m.telefono {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__heading {
+    text-align: left;
+    &::after {
+      content: "";
+      width: 40%;
+      height: 1rem;
+      display: block;
+      background-color: v.$blanco;
+      margin-top: -1rem;
+    }
+  }
+
+  &__imagen {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    &:hover {
+      transform: rotate(5deg) scale(1.2);
+    }
+  }
+}
