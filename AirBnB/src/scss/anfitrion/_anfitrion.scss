@@ -1,0 +1,61 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.anfitrion {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  padding: 20rem 5rem;
+  background-image: linear-gradient(
+      to right,
+      v.$negro 0%,
+      v.$negro 45%,
+      transparent 55%
+    ),
+    url(../img/anfitrion.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include m.telefono {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(
+        to bottom,
+        v.$negro 0%,
+        v.$negro 45%,
+        transparent 55%
+      ),
+      url(../img/anfitrion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  display: flex;
+  align-items: center;
+
+  &__contenido {
+    width: 50%;
+
+    @include m.telefono {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    color: v.$blanco;
+  }
+
+  &__texto {
+    color: v.$blanco;
+    margin-bottom: 5rem;
+  }
+
+  &__boton {
+    color: v.$negro;
+    background-color: v.$blanco;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    font-weight: 900;
+  }
+}
